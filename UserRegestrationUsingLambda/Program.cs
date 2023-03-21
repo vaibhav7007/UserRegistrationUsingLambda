@@ -14,7 +14,7 @@ namespace UserRegestrationUsingLambda
             switch (option)
             {
                 case 1:
-                    userRegistration.CheckFirstName("Shivani");
+                    userRegistration.CheckFirstName("Vaibhav");
                     break;
                 default:
                     Console.WriteLine("Please enter right option");
