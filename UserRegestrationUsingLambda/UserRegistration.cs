@@ -91,5 +91,28 @@ namespace UserRegestrationUsingLambda
                 Console.WriteLine("Invalid");
             }
         }
+        public void CheckPassword4(string password)
+        {
+            if (userDetails.Any(x => x.Password4.IsMatch(password)))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
+        public void CheckSampleEamils(string[] emails)
+        {
+            foreach (string inputs in emails)
+                if (userDetails.Any(x => x.SampleEmails.IsMatch(inputs)))
+                {
+                    Console.WriteLine("Valid");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid");
+                }
+        }
     }
 }
