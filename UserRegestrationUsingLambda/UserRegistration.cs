@@ -36,5 +36,16 @@ namespace UserRegestrationUsingLambda
                 Console.WriteLine("Invalid");
             }
         }
+        public void CheckEmailID(string emailId)
+        {
+            if (userDetails.Any(x => x.EmailID.IsMatch(emailId)))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
     }
 }
