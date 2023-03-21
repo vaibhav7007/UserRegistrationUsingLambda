@@ -80,5 +80,16 @@ namespace UserRegestrationUsingLambda
                 Console.WriteLine("Invalid");
             }
         }
+        public void CheckPassword3(string password)
+        {
+            if (userDetails.Any(x => x.Password3.IsMatch(password)))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
     }
 }
