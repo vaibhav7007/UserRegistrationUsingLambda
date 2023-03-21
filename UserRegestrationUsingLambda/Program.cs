@@ -8,7 +8,7 @@ namespace UserRegestrationUsingLambda
         {
             Console.WriteLine("Welcome to User Registration Using Lambda Expression");
             Console.WriteLine("Please enter an option");
-            Console.WriteLine("1:First Name\n2:Check Last Name\n3:Check Email Id");
+            Console.WriteLine("1:First Name\n2:Check Last Name\n3:Check Email Id\n4:Check Phone Number");
             int option = Convert.ToInt32(Console.ReadLine());
             UserRegistration userRegistration = new UserRegistration();
             switch (option)
@@ -21,6 +21,9 @@ namespace UserRegestrationUsingLambda
                     break;
                 case 3:
                     userRegistration.CheckEmailID("abc.xyz@bridgelabz.co.in");
+                    break;
+                case 4:
+                    userRegistration.CheckPhoneNumber("91 8983922703");
                     break;
                 default:
                     Console.WriteLine("Please enter right option");

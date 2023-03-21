@@ -47,5 +47,16 @@ namespace UserRegestrationUsingLambda
                 Console.WriteLine("Invalid");
             }
         }
+        public void CheckPhoneNumber(string phoneNumber)
+        {
+            if (userDetails.Any(x => x.PhoneNumber.IsMatch(phoneNumber)))
+            {
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+            }
+        }
     }
 }
